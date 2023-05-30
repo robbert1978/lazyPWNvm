@@ -13,6 +13,9 @@ wget https://github.com/owl4ce/dotfiles/releases/download/ng/M+.1mn.Nerd.Font.Co
 cd ..
 fc-cache -fv
 
+#Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 #Custom zsh
 cd ~/
 rm -rf ~/.zshrc && \
