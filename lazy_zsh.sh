@@ -6,6 +6,7 @@ sudo apt install -y zsh
 
 #Install fonts
 mkdir -p ~/.fonts && \
+cd ~/.fonts && \
 wget https://github.com/owl4ce/dotfiles/releases/download/ng/Iosevka.Nerd.Font.Complete.Mono.ttf && \
 wget https://github.com/owl4ce/dotfiles/releases/download/ng/M+.1mn.Nerd.Font.Complete.Mono.ttf && \
 wget https://github.com/owl4ce/dotfiles/releases/download/ng/M+.1mn.Nerd.Font.Complete.ttf
