@@ -39,6 +39,13 @@ cd alt-pwninit && \
 make setup && \
 cd ../
 
+# Install gdb-pt-dump
+git clone https://github.com/martinradev/gdb-pt-dump.git
+
+
+# Install libc-database
+git clone https://github.com/niklasb/libc-database.git
+
 # Script for adding libc's source code to gdb
 wget https://gist.githubusercontent.com/robbert1978/84a345665c23171028d474cc699c236a/raw/1415cfed04c5f428bb65378243c81c2c3f56a690/add_glibc_src.py
 
