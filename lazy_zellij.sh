@@ -62,7 +62,7 @@ cat << EOF >> "$HOME/$rc_file"
 if [[ ! -z "\$SSH_CLIENT" ]] then
 	if [[ "\$TERM_PROGRAM" != "vscode"  && -z "\$ZELLIJ_SESSION_NAME" ]] then
         export TERM_PROGRAM="zrun"
-		exec zellij # If not in vscode terminal, force using zellij
+		zellij # If not in vscode terminal, force using zellij
         exit
 	fi
 fi
