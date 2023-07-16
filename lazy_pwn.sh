@@ -7,7 +7,6 @@ sudo dpkg --add-architecture i386
 
 sudo apt update
 
-
 sudo apt-get install -y \
     socat build-essential \
     jq strace ltrace curl \
@@ -27,11 +26,15 @@ cd ~/ && \
 mkdir -p tools && \
 cd tools
 
-# Install pwndbg
-git clone https://github.com/pwndbg/pwndbg.git && \
-cd pwndbg && \
-./setup.sh && \
-cd ../
+# Install stable pwndbg
+curl -s https://api.github.com/repos/pwndbg/pwndbg/releases/latest \
+| grep ".*zip" \
+| cut -d : -f 2,3 \
+| tr -d \", \
+| wget -O pwndbg.zip -qi -
+
+unzip pwndbg.zip
+mov pwndbg-*  pwndbg
 
 # Install alt-pwninit
 git clone https://github.com/robbert1978/alt-pwninit.git && \
@@ -43,11 +46,16 @@ cd ../
 git clone https://github.com/martinradev/gdb-pt-dump.git
 
 
+#Setup .gdbinit
+
+echo "source $HOME/tools/gdb-pt-dump/pt.py" >> ~/.gdbinit
+sudo cp ~/.gdbinit /root/.gdbinit
+
 # Install libc-database
 git clone https://github.com/niklasb/libc-database.git
 
 # Script for adding libc's source code to gdb
-wget https://gist.githubusercontent.com/robbert1978/84a345665c23171028d474cc699c236a/raw/1415cfed04c5f428bb65378243c81c2c3f56a690/add_glibc_src.py
+wget -O ~/tools/add_glibc_src.py https://gist.githubusercontent.com/robbert1978/84a345665c23171028d474cc699c236a/raw/1415cfed04c5f428bb65378243c81c2c3f56a690/add_glibc_src.py
 
 # Exit "tools" dir
 cd ../
