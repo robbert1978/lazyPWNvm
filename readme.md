@@ -1,1 +1,1 @@
-# Scripts for quickly setup a simple vm for playing CTF pwn challenges in Ubuntu 22.04
+# Scripts for quickly setup a simple vm for playing CTF pwn challenges in Ubuntu
