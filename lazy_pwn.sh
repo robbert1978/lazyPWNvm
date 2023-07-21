@@ -27,14 +27,10 @@ mkdir -p tools && \
 cd tools
 
 # Install stable pwndbg
-curl -s https://api.github.com/repos/pwndbg/pwndbg/releases/latest \
-| grep ".*zip" \
-| cut -d : -f 2,3 \
-| tr -d \", \
-| wget -O pwndbg.zip -qi -
-
-unzip pwndbg.zip
-mov pwndbg-*  pwndbg
+git clone https://github.com/pwndbg/pwndbg.git && \
+cd pwndbg && \
+./setup.sh && \
+cd ..
 
 # Install alt-pwninit
 git clone https://github.com/robbert1978/alt-pwninit.git && \
