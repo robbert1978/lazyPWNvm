@@ -41,6 +41,9 @@ cd ../
 # Install gdb-pt-dump
 git clone https://github.com/martinradev/gdb-pt-dump.git
 
+# Install vmlinux-to-elf
+
+git clone https://github.com/marin-m/vmlinux-to-elf.git
 
 #Setup .gdbinit
 
