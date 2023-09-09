@@ -32,6 +32,10 @@ cd pwndbg && \
 ./setup.sh && \
 cd ..
 
+
+#Install gef
+git clone https://github.com/bata24/gef
+
 # Install alt-pwninit
 git clone https://github.com/robbert1978/alt-pwninit.git && \
 cd alt-pwninit && \
