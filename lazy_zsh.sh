@@ -20,7 +20,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 #Custom zsh
 cp $BASEDIR/zshrc ~/.zshrc
-co $BASEDIR/robbert.zsh-theme ~/.oh-my-zsh/custom/themes/robbert.zsh-theme
+cp $BASEDIR/robbert.zsh-theme ~/.oh-my-zsh/custom/themes/robbert.zsh-theme
 
 #Install zsh plugins
 git clone --depth 1 https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
