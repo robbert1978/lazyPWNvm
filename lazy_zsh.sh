@@ -6,6 +6,9 @@ BASEDIR=$(dirname $0)
 sudo apt update
 sudo apt install -y zsh
 
+if grep -q -i Microsoft /proc/version; then
+echo "WSL detected"
+else
 #Install fonts
 mkdir -p ~/.fonts && \
 cd ~/.fonts && \
@@ -14,6 +17,7 @@ wget https://github.com/owl4ce/dotfiles/releases/download/ng/M+.1mn.Nerd.Font.Co
 wget https://github.com/owl4ce/dotfiles/releases/download/ng/M+.1mn.Nerd.Font.Complete.ttf
 cd ..
 fc-cache -fv
+fi
 
 #Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
