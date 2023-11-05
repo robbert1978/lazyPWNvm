@@ -23,9 +23,9 @@ sudo apt-get install -y python-is-python3
 # Install tools for pwn
 
 cd ~/ && \
-mkdir -p tools && \
+sudo mkdir -p tools && \
 sudo ln -s ~/tools /tools && \
-cd tools
+cd /tools
 
 # Install stable pwndbg
 git clone https://github.com/pwndbg/pwndbg.git && \
