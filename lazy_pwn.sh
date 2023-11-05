@@ -76,6 +76,11 @@ wget -O /tmp/rp-lin-clang.zip https://github.com/0vercl0k/rp/releases/download/v
 unzip /tmp/rp-lin-clang.zip &&
 chmod +x rp-lin
 
+#checksec.sh
+
+wget -O /tools/checksec.sh https://raw.githubusercontent.com/slimm609/checksec.sh/main/checksec && \
+chmod +x /tools/checksec.sh
+
 # Exit "tools" dir
 cd ../
 
