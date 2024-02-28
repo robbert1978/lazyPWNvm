@@ -23,7 +23,7 @@ sudo apt-get install -y python-is-python3
 # Install tools for pwn
 
 cd ~/ && \
-sudo mkdir -p tools && \
+mkdir -p ~/tools && \
 sudo ln -s ~/tools /tools && \
 cd /tools
 
