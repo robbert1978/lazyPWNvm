@@ -92,9 +92,9 @@ if [ -x "$(command -v rc-service)" ]; then
     alias rc-service='${PRIV##*/} rc-service'
     alias rc-update='${PRIV##*/} rc-update'
 fi
-alias idafree=/mnt/c/Users/robbert/Documents/Tools/IDA_Freeware8.3/ida64.exe
-alias ida64=/mnt/c/Users/robbert/Documents/Tools/IDA_Pro7.7/ida64.exe
-alias ida32=/mnt/c/Users/robbert/Documents/Tools/IDA_Pro7.7/ida32.exe
+
+alias ida64=/mnt/c/Users/robbert/Documents/Tools/IDA_Pro8.3/ida64.exe
+alias ida=/mnt/c/Users/robbert/Documents/Tools/IDA_Pro8.3/ida.exe
 alias gdb-gef='gdb -ex "source /tools/gef/gef.py"'
 
 function checksec-cfi {
